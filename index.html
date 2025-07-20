@@ -1,93 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shrey Talan Resume</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrey Talan Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg mt-6">
-    <header class="text-center mb-6">
-      <h1 class="text-3xl font-bold">Shrey Talan</h1>
-      <p class="text-sm">📞 +44 7824341407 | ✉️ shrey.talan.14ece@gmail.com</p>
-      <a class="text-blue-600 text-sm" href="https://www.linkedin.com/in/shreytalan" target="_blank">LinkedIn Profile</a>
-    </header>
 
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-2">Professional Summary</h2>
-      <p>
-        Results-driven Software Developer with 5+ years of experience in designing and optimizing scalable solutions.
-        Specialized in Java, Spring Boot, Microservices, and AWS with a strong focus on performance, scalability, and collaboration.
-      </p>
-    </section>
-
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-2">Technical Skills</h2>
-      <ul class="list-disc list-inside grid grid-cols-2 gap-x-8 text-sm">
-        <li><strong>Languages:</strong> Java, Python, SQL, JS, HTML, CSS, TypeScript</li>
-        <li><strong>Frameworks:</strong> Spring Boot, Hibernate, JPA, React, Redux</li>
-        <li><strong>Cloud:</strong> AWS (Lambda, RDS, S3, etc), Cloud Foundry</li>
-        <li><strong>DevOps:</strong> Jenkins, Docker, K8s, Terraform</li>
-        <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis</li>
-        <li><strong>Messaging:</strong> Kafka, RabbitMQ</li>
-        <li><strong>Tools:</strong> Git, Postman, JIRA, Confluence</li>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Shrey Talan</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </section>
+    </div>
+  </nav>
 
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-2">Experience</h2>
-      <div class="mb-3">
-        <h3 class="font-semibold">JP Morgan | Software Engineer</h3>
-        <p class="text-sm text-gray-600">Sep 2022 – Present | Glasgow, UK</p>
-        <ul class="list-disc list-inside text-sm">
-          <li>Migrated high-revenue monolith to AWS with microservices</li>
-          <li>Improved scalability using Lambda, RDS, CloudFormation</li>
-          <li>Cut ops cost by 40% via Cloud Foundry migration</li>
-          <li>Proposed resilient architectures improving performance</li>
+  <nav id="hamburger-nav">
+    <div class="logo">Shrey Talan</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Shrey Talan profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Shrey Talan</h1>
+      <p class="section__text__p2">Software Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/SHREYTALAN2025.pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/shreytalan'" />
+        <img src="./assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/'" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>5.3+ years<br />Java / Spring Boot / AWS</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>M.Sc. Computer Science - Glasgow<br />B.E. Computer Science - India</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I specialize in designing and optimizing scalable backend systems using Java, Spring Boot, and AWS services.
+            With experience at JP Morgan, Amdocs, and Infosys, I’ve led cloud migration, built enterprise microservices, and improved system performance across multiple domains.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'" />
+  </section>
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">JP Morgan – Software Engineer</h2>
+          <p><em>Sep 2022 – Present</em></p>
+          <ul>
+            <li>Migrated legacy app to AWS with microservices</li>
+            <li>Reduced ops costs by 40%</li>
+            <li>Built monitoring with CloudWatch</li>
+          </ul>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Amdocs – Software Developer</h2>
+          <p><em>Mar 2020 – Aug 2021</em></p>
+          <ul>
+            <li>Developed Spring Boot + React apps</li>
+            <li>Implemented CI/CD with Jenkins, Docker</li>
+          </ul>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Infosys – System Engineer</h2>
+          <p><em>Sep 2018 – Mar 2020</em></p>
+          <ul>
+            <li>Java full-stack dev and DB optimization</li>
+            <li>Reduced downtime by 20%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#skills'" />
+  </section>
+
+  <section id="skills">
+    <p class="section__text__p1">My Tech Stack</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend & DevOps</h2>
+          <div class="article-container">
+            <article><h3>Java</h3><p>Expert</p></article>
+            <article><h3>Spring Boot</h3><p>Expert</p></article>
+            <article><h3>PostgreSQL</h3><p>Proficient</p></article>
+            <article><h3>AWS</h3><p>Advanced</p></article>
+            <article><h3>Docker</h3><p>Intermediate</p></article>
+            <article><h3>Kubernetes</h3><p>Intermediate</p></article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend & Tools</h2>
+          <div class="article-container">
+            <article><h3>React</h3><p>Proficient</p></article>
+            <article><h3>JavaScript</h3><p>Intermediate</p></article>
+            <article><h3>Git</h3><p>Advanced</p></article>
+            <article><h3>JIRA</h3><p>Experienced</p></article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'" />
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:shrey.talan.14ece@gmail.com">shrey.talan.14ece@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/shreytalan">linkedin.com/in/shreytalan</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div class="mb-3">
-        <h3 class="font-semibold">Amdocs | Software Developer</h3>
-        <p class="text-sm text-gray-600">Mar 2020 – Aug 2021 | India</p>
-        <ul class="list-disc list-inside text-sm">
-          <li>Built scalable enterprise apps with Spring Boot & React</li>
-          <li>Automated CI/CD with Jenkins, Docker</li>
-          <li>Led onshore-offshore collaborations</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold">Infosys | System Engineer</h3>
-        <p class="text-sm text-gray-600">Sep 2018 – Mar 2020 | India</p>
-        <ul class="list-disc list-inside text-sm">
-          <li>Full-stack Java app development across SDLC</li>
-          <li>Optimized DB queries improving load time by 15%</li>
-          <li>Built reusable component libraries</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-2">Education</h2>
-      <ul class="list-disc list-inside text-sm">
-        <li><strong>MSc Computer Science</strong>, University of Glasgow (2021 – 2022)</li>
-        <li><strong>B.E. Computer Science</strong>, BML Munjal University (2014 – 2018)</li>
-      </ul>
-    </section>
-
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold border-b pb-1 mb-2">Certifications & Achievements</h2>
-      <ul class="list-disc list-inside text-sm">
-        <li>AWS Developer Associate (DVA-C02)</li>
-        <li>Infosys Java Training – Batch Topper</li>
-        <li>Paper Published – IJARET (Java & Dynamic Web DBs)</li>
-        <li>Amdocs SRE Award – Delivered AtomIQ Automation Tool</li>
-      </ul>
-    </section>
-
-    <footer class="text-center text-xs text-gray-500 mt-8">
-      References available upon request
-    </footer>
-  </div>
+    </nav>
+    <p>&#169; 2025 Shrey Talan. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
